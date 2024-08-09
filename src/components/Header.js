@@ -1,3 +1,9 @@
+import { Box, Flex } from "@chakra-ui/react";
+
 export const Header = () => {
-  return <div></div>;
+  return (
+    <Flex>
+      <Box>로고</Box>
+    </Flex>
+  );
 };
