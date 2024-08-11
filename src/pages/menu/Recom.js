@@ -1,3 +1,3 @@
 export const Recom = () => {
-  return <div></div>;
+  return <div>추천해줘</div>;
 };

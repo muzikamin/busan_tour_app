@@ -1,3 +1,3 @@
 export const Location = () => {
-  return <div></div>;
+  return <div>구별명소</div>;
 };

@@ -8,10 +8,12 @@ import { SignUp } from "./pages/login/SignUp";
 import { Login } from "./pages/login/LogIn";
 import { PageNotFound } from "./PageNotFound";
 import { routes } from "./routes";
+import { Header } from "./components/Header";
 
 export const Router = () => {
   return (
     <HashRouter>
+      <Header />
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.detail} element={<Detail />} />

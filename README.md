@@ -3,3 +3,4 @@
 - fetch
 - chakra ui
 - noto sans
+- react icons
