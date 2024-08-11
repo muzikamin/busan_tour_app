@@ -1,3 +1,9 @@
+import { PageTitle } from "../../components/PageTitle";
+
 export const Recom = () => {
-  return <div>추천해줘</div>;
+  return (
+    <div>
+      <PageTitle title="추천명소" />
+    </div>
+  );
 };

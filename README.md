@@ -4,3 +4,5 @@
 - chakra ui
 - noto sans
 - react icons
+- react spinners
+- swiper

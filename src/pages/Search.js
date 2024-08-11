@@ -1,3 +1,9 @@
+import { PageTitle } from "../components/PageTitle";
+
 export const Search = () => {
-  return <div>검색해</div>;
+  return (
+    <div>
+      <PageTitle title="검색하기" />
+    </div>
+  );
 };

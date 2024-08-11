@@ -1,3 +1,9 @@
+import { PageTitle } from "../components/PageTitle";
+
 export const Detail = () => {
-  return <div>디테일이지롱</div>;
+  return (
+    <div>
+      <PageTitle title="정보" />
+    </div>
+  );
 };

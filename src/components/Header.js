@@ -2,21 +2,30 @@ import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { routes } from "../routes";
 import { AiOutlineLogin } from "react-icons/ai";
+import { colorPoint, margin } from "../baseSet";
 
 export const Header = () => {
   return (
     <Flex
-      px="100px"
+      position="fixed"
+      top="0"
+      left="0"
+      zIndex="99"
+      px={margin.lrm}
       w="100%"
       h="60px"
-      bg="red"
       justifyContent="center"
       alignItems="center"
       fontSize="20px"
-      fontWeight="700"
+      fontWeight="400"
+      bgColor="rgba(255, 255, 255, 0.66)"
     >
       <Box>
-        <Link to={routes.home}>어디GO</Link>
+        <Link to={routes.home}>
+          <Text fontWeight="900" color={colorPoint.point}>
+            어디GO
+          </Text>
+        </Link>
       </Box>
       <Spacer />
       <Flex gap="50px">
