@@ -9,6 +9,7 @@ import { Login } from "./pages/login/LogIn";
 import { PageNotFound } from "./PageNotFound";
 import { routes } from "./routes";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 export const Router = () => {
   return (
@@ -24,6 +25,7 @@ export const Router = () => {
         <Route path={routes.login} element={<Login />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </HashRouter>
   );
 };

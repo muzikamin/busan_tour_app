@@ -6,3 +6,4 @@
 - react icons
 - react spinners
 - swiper
+- react-hook-form
