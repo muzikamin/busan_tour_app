@@ -1,10 +1,25 @@
 import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { routes } from "../routes";
-import { AiOutlineLogin } from "react-icons/ai";
 import { colorPoint, margin } from "../baseSet";
+import { useState } from "react";
+import { routes } from "../routes";
 
 export const Header = () => {
+  const [headerFix, setHeaderFix] = useState();
+
+  const scrollHandler = () => {
+    const pageY = window.scrollY;
+    // console.log(pageY);
+
+    if (pageY >= 100) {
+      setHeaderFix("rgba(255, 255, 255, 0.9)");
+    } else {
+      setHeaderFix("rgba(255, 255, 255, 0.6)");
+    }
+  };
+
+  window.addEventListener("scroll", scrollHandler);
+
   return (
     <Flex
       position="fixed"
@@ -18,7 +33,7 @@ export const Header = () => {
       alignItems="center"
       fontSize="20px"
       fontWeight="400"
-      bgColor="rgba(255, 255, 255, 0.66)"
+      bgColor={headerFix}
     >
       <Box>
         <Link to={routes.home}>
