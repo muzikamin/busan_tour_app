@@ -2,33 +2,26 @@ import { Form } from "react-router-dom";
 import { PageTitle } from "../components/PageTitle";
 import { FiSearch } from "react-icons/fi";
 import { useForm } from "react-hook-form";
+import { Input, position, Stack, styled, Text } from "@chakra-ui/react";
+import { _detailData } from "../api";
+import { useState } from "react";
 
 export const Search = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid },
-  } = useForm();
+  const [search, setSearch] = useState("");
 
-  const onSearchResult = () => {};
+  const onChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filterTitle = movies.filter((p) => {
+    return p.TITLE.toLocaleLowerCase().includes(search.toLocaleLowerCase());
+  });
 
   return (
     <div>
       <PageTitle title="검색하기" />
-
       <>
-        <Form onSubmit={handleSubmit(onSearchResult)}>
-          <input
-            {...register("keyword", {
-              required: "검색내용을 입력해 주세요",
-            })}
-            type="text"
-            placeholder="검색내용 입력..."
-          />
-          <button>
-            <FiSearch />
-          </button>
-        </Form>
+        <input type="text" value={search} onChange={onChange} />
       </>
     </div>
   );
