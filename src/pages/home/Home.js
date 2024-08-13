@@ -70,7 +70,7 @@ export const Home = () => {
           >
             {themeinData.map((data) => (
               <SwiperSlide key={data.UC_SEQ}>
-                <Link to={`/detail/${data.UC_SEQ}`}>
+                <Link to={`/detailTheme/${data.UC_SEQ}`}>
                   <Box w="100%" h="80vh" position="relative">
                     <Box
                       w="100%"
@@ -125,7 +125,7 @@ export const Home = () => {
               spaceBetween="15px"
               loop={true}
               autoplay={{
-                delay: 5000,
+                delay: 4500,
                 disableOnInteraction: false,
               }}
               pagination={{ clickable: true }}
@@ -188,14 +188,14 @@ export const Home = () => {
                 }}
                 loop={true}
                 autoplay={{
-                  delay: 5000,
+                  delay: 5500,
                   disableOnInteraction: false,
                 }}
                 pagination={{ clickable: true }}
               >
                 {FoodData.map((data) => (
                   <SwiperSlide key={data.UC_SEQ}>
-                    <Link to={`/detail/${data.UC_SEQ}`}>
+                    <Link to={`/detailfood/${data.UC_SEQ}`}>
                       <Box w="100%">
                         <Image
                           borderRadius="10px"
@@ -251,14 +251,14 @@ export const Home = () => {
               }}
               loop={true}
               autoplay={{
-                delay: 5000,
+                delay: 6000,
                 disableOnInteraction: false,
               }}
               pagination={{ clickable: true }}
             >
               {themeinData.map((data) => (
                 <SwiperSlide key={data.UC_SEQ}>
-                  <Link to={`/detail/${data.UC_SEQ}`}>
+                  <Link to={`/detailtheme/${data.UC_SEQ}`}>
                     <Box w="100%">
                       <Image
                         borderRadius="10px"

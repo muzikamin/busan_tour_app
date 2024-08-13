@@ -14,7 +14,7 @@ import {
 import { useParams } from "react-router-dom";
 import { colorPoint } from "../baseSet";
 
-export const Detail = () => {
+export const DetailTheme = () => {
   const [detailData, setDetailData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id: locationId } = useParams();
@@ -25,7 +25,7 @@ export const Detail = () => {
   useEffect(() => {
     (async () => {
       try {
-        const { getAttractionKr: data } = await _detailData(locationId);
+        const { getRecommendedKr: data } = await _detailThemeData(locationId);
 
         setIsLoading(false);
         setDetailData(...data.item);

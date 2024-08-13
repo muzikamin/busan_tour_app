@@ -10,6 +10,8 @@ import { PageNotFound } from "./PageNotFound";
 import { routes } from "./routes";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { DetailTheme } from "./pages/DetailTheme";
+import { DetailFood } from "./pages/DetailFood";
 
 export const Router = () => {
   return (
@@ -18,6 +20,8 @@ export const Router = () => {
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.detail} element={<Detail />} />
+        <Route path={routes.detailFood} element={<DetailFood />} />
+        <Route path={routes.detailTheme} element={<DetailTheme />} />
         <Route path={routes.search} element={<Search />} />
         <Route path={routes.recommend} element={<Recom />} />
         <Route path={routes.location} element={<Location />} />

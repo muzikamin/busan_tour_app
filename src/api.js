@@ -44,5 +44,11 @@ export const themeData = () =>
 export const _detailData = (id) =>
   fetch(url + `&UC_SEQ=${id}`, options).then((res) => res.json());
 
+export const _detailFoodData = (id) =>
+  fetch(FoodUrl + `&UC_SEQ=${id}`, options).then((res) => res.json());
+
+export const _detailThemeData = (id) =>
+  fetch(themeUrl + `&UC_SEQ=${id}`, options).then((res) => res.json());
+
 export const reDataImg = () =>
   fetch(urlImg(randomNumber), options).then((res) => res.json());

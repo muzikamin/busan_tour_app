@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PageTitle } from "../components/PageTitle";
-import { _detailData, _detailThemeData } from "../api";
+import { _detailData, _detailFoodData, _detailThemeData } from "../api";
 import { Loading } from "../components/Loading";
 import {
   Box,
@@ -14,7 +14,7 @@ import {
 import { useParams } from "react-router-dom";
 import { colorPoint } from "../baseSet";
 
-export const Detail = () => {
+export const DetailFood = () => {
   const [detailData, setDetailData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id: locationId } = useParams();
@@ -25,7 +25,7 @@ export const Detail = () => {
   useEffect(() => {
     (async () => {
       try {
-        const { getAttractionKr: data } = await _detailData(locationId);
+        const { getFoodKr: data } = await _detailFoodData(locationId);
 
         setIsLoading(false);
         setDetailData(...data.item);
@@ -84,27 +84,33 @@ export const Detail = () => {
                     />
                     <Flex lineHeight="36px">
                       <Box
-                        width="400px"
+                        width="200px"
                         fontSize="18px"
                         fontWeight="900"
                         marginRight="50px"
                         // bg="red"
                       >
                         <Text>{detailData.ADDR1 ? "주소" : ""} </Text>
-                        <Text>{detailData.CATE2_NM ? "테마" : ""} </Text>
+                        <Text>{detailData.RPRSNTV_MENU ? "메뉴" : ""} </Text>
                         <Text>{detailData.CNTCT_TEL ? "문의" : ""} </Text>
-                        <Text>{detailData.TRFC_INFO ? "대중교통" : ""} </Text>
+                        <Text>
+                          {detailData.USAGE_DAY_WEEK_AND_TIME ? "운영시간" : ""}{" "}
+                        </Text>
                       </Box>
                       <Box fontSize="18px" fontWeight="400">
                         <Text>{detailData.ADDR1 ? detailData.ADDR1 : ""}</Text>
                         <Text>
-                          {detailData.CATE2_NM ? detailData.CATE2_NM : ""}
+                          {detailData.RPRSNTV_MENU
+                            ? detailData.RPRSNTV_MENU
+                            : ""}
                         </Text>
                         <Text>
                           {detailData.CNTCT_TEL ? detailData.CNTCT_TEL : ""}
                         </Text>
                         <Text>
-                          {detailData.TRFC_INFO ? detailData.TRFC_INFO : ""}
+                          {detailData.USAGE_DAY_WEEK_AND_TIME
+                            ? detailData.USAGE_DAY_WEEK_AND_TIME
+                            : ""}
                         </Text>
                       </Box>
                     </Flex>
