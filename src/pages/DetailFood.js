@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { colorPoint } from "../baseSet";
+import { Location } from "./menu/Location";
 
 export const DetailFood = () => {
   const [detailData, setDetailData] = useState();
@@ -134,6 +135,7 @@ export const DetailFood = () => {
                 </Button>
               </Text>
             </Box>
+            <Location lat={detailData.LAT} lng={detailData.LNG} />
           </>
         )}
       </div>

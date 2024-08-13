@@ -52,3 +52,5 @@ export const _detailThemeData = (id) =>
 
 export const reDataImg = () =>
   fetch(urlImg(randomNumber), options).then((res) => res.json());
+
+// 342ca894cb416bd18a5959b63754342c
