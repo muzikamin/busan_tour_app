@@ -14,8 +14,10 @@ import {
 import { useParams } from "react-router-dom";
 import { colorPoint } from "../baseSet";
 import { Location } from "./menu/Location";
+import { useScrollTop } from "../lib/useScrollTop";
 
 export const DetailFood = () => {
+  useScrollTop();
   const [detailData, setDetailData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id: locationId } = useParams();
@@ -48,7 +50,7 @@ export const DetailFood = () => {
         ) : (
           <>
             <PageTitle title={detailData.TITLE} />
-            <Box w="100%" h="100%" padding="120px">
+            <Box margin="0 auto" h="100%" maxWidth="1400px" paddingTop="120px">
               <Box display="flex" alignItems="center" textAlign="center">
                 <Flex>
                   <Box w="50%" h="500px" mr="40px">
@@ -69,14 +71,6 @@ export const DetailFood = () => {
                       marginBottom="10px"
                     >
                       {detailData.TITLE}
-                    </Text>
-                    <Text
-                      fontSize="24px"
-                      fontWeight="400"
-                      marginBottom="16px"
-                      opacity="0.7"
-                    >
-                      {detailData.SUBTITLE}
                     </Text>
                     <Box
                       marginTop="20px"

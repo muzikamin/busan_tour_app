@@ -2,20 +2,14 @@ import React, { useEffect, useState } from "react";
 import { PageTitle } from "../components/PageTitle";
 import { _detailData, _detailThemeData } from "../api";
 import { Loading } from "../components/Loading";
-import {
-  Box,
-  Button,
-  Collapse,
-  Flex,
-  Image,
-  Img,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Collapse, Flex, Image, Text } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { colorPoint } from "../baseSet";
 import { Location } from "./menu/Location";
+import { useScrollTop } from "../lib/useScrollTop";
 
 export const Detail = () => {
+  useScrollTop();
   const [detailData, setDetailData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id: locationId } = useParams();
@@ -48,7 +42,7 @@ export const Detail = () => {
         ) : (
           <>
             <PageTitle title={detailData.TITLE} />
-            <Box w="100%" h="100%" padding="120px">
+            <Box margin="0 auto" h="100%" maxWidth="1400px" paddingTop="120px">
               <Box display="flex" alignItems="center" textAlign="center">
                 <Flex>
                   <Box w="50%" h="500px" mr="40px">

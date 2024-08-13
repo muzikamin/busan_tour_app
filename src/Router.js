@@ -4,8 +4,6 @@ import { Detail } from "./pages/Detail";
 import { Search } from "./pages/Search";
 import { Recom } from "./pages/menu/Recom";
 import { Location } from "./pages/menu/Location";
-import { SignUp } from "./pages/login/SignUp";
-import { Login } from "./pages/login/LogIn";
 import { PageNotFound } from "./PageNotFound";
 import { routes } from "./routes";
 import { Header } from "./components/Header";
@@ -25,8 +23,6 @@ export const Router = () => {
         <Route path={routes.search} element={<Search />} />
         <Route path={routes.recommend} element={<Recom />} />
         <Route path={routes.location} element={<Location />} />
-        <Route path={routes.signup} element={<SignUp />} />
-        <Route path={routes.login} element={<Login />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />

@@ -8,8 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { colorPoint, margin } from "../../baseSet";
 import { Autoplay, Pagination, Zoom } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { useScrollTop } from "../../lib/useScrollTop";
+import { TopBtnBox } from "../../lib/topBtn";
 
 export const Home = () => {
+  useScrollTop();
   const [fordata, setForData] = useState();
   const [FoodData, setFoodData] = useState();
   const [themeinData, setThemeData] = useState();
@@ -53,6 +56,7 @@ export const Home = () => {
   return (
     <>
       <PageTitle title="HOME" />
+      <TopBtnBox />
       {isLoading ? (
         <Loading />
       ) : (

@@ -27,7 +27,10 @@ export const Location = ({ lat, lng }) => {
 
   return (
     <Flex marginBottom="30px" alignItems="center" justifyContent="center">
-      <div id="map" style={{ width: "80%", height: "600px" }}></div>
+      <div
+        id="map"
+        style={{ width: "70%", height: "600px", margin: "80px 0" }}
+      ></div>
     </Flex>
   );
 };
