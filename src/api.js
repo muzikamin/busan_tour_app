@@ -25,6 +25,21 @@ const FoodUrl =
   foodBaseUrl +
   `?serviceKey=${serviceKey}&numOfRows=20&pageNo=1&resultType=json`;
 
+// -------------------------------------------------search
+
+const SearchUrl =
+  baseUrl + `?serviceKey=${serviceKey}&numOfRows=999&pageNo=1&resultType=json`;
+
+const SearchFoodUrl =
+  foodBaseUrl +
+  `?serviceKey=${serviceKey}&numOfRows=999&pageNo=1&resultType=json`;
+
+const SearchThemeUrl =
+  themeBaseUrl +
+  `?serviceKey=${serviceKey}&numOfRows=999&pageNo=1&resultType=json`;
+
+// -------------------------------------------------search
+
 const themeUrl =
   themeBaseUrl +
   `?serviceKey=${serviceKey}&numOfRows=20&pageNo=1&resultType=json`;
@@ -40,6 +55,18 @@ export const reData = () => fetch(url, options).then((res) => res.json());
 export const foodData = () => fetch(FoodUrl, options).then((res) => res.json());
 export const themeData = () =>
   fetch(themeUrl, options).then((res) => res.json());
+
+// -------------------------------------------------search
+export const reDataSearch = () =>
+  fetch(SearchUrl, options).then((res) => res.json());
+
+export const SearchfoodData = () =>
+  fetch(SearchFoodUrl, options).then((res) => res.json());
+
+export const SearchthemeData = () =>
+  fetch(SearchThemeUrl, options).then((res) => res.json());
+
+// -------------------------------------------------search
 
 export const _detailData = (id) =>
   fetch(url + `&UC_SEQ=${id}`, options).then((res) => res.json());
