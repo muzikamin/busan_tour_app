@@ -89,7 +89,16 @@ export const Home = () => {
                         lg: margin.lrmm,
                         base: margin.lrmm,
                       }}
-                      bottom="100px"
+                      bottom={{
+                        xl: "100px",
+                        lg: "80px",
+                        base: "60px",
+                      }}
+                      right={{
+                        xl: margin.lrm,
+                        lg: margin.lrmm,
+                        base: margin.lrmm,
+                      }}
                     >
                       <Text
                         fontSize={{
@@ -126,9 +135,17 @@ export const Home = () => {
           </Swiper>
           {/* -----------------메인배너--------------------- */}
           <Box
-            marginTop="100px"
+            marginTop={{
+              xl: "100px",
+              lg: "80px",
+              base: "60px",
+            }}
             px={{ xl: margin.lrm, lg: margin.lrmm, base: margin.lrmm }}
-            marginBottom="100px"
+            marginBottom={{
+              xl: "100px",
+              lg: "80px",
+              base: "60px",
+            }}
           >
             <Text fontSize="32px" fontWeight="700" mb="10px">
               부산 어디로 GO?
@@ -193,9 +210,17 @@ export const Home = () => {
           {/* -----------------첫번째 섹션--------------------- */}
           <Box bg={colorPoint.pointopa} paddingTop="10px" paddingBottom="10px">
             <Box
-              marginTop="100px"
+              marginTop={{
+                xl: "100px",
+                lg: "80px",
+                base: "60px",
+              }}
               px={{ xl: margin.lrm, lg: margin.lrmm, base: margin.lrmm }}
-              marginBottom="100px"
+              marginBottom={{
+                xl: "100px",
+                lg: "80px",
+                base: "60px",
+              }}
             >
               <Text fontSize="32px" fontWeight="700" mb="10px">
                 부산 맛집으로 GO?
@@ -260,9 +285,17 @@ export const Home = () => {
           </Box>
           {/* -----------------두번째 섹션--------------------- */}
           <Box
-            marginTop="100px"
+            marginTop={{
+              xl: "100px",
+              lg: "80px",
+              base: "60px",
+            }}
             px={{ xl: margin.lrm, lg: margin.lrmm, base: margin.lrmm }}
-            marginBottom="100px"
+            marginBottom={{
+              xl: "100px",
+              lg: "80px",
+              base: "60px",
+            }}
           >
             <Text
               fontSize={{

@@ -32,7 +32,7 @@ export const Header = () => {
       justifyContent="center"
       alignItems="center"
       fontSize={{ xl: "22px", lg: "18px" }}
-      fontWeight="600"
+      fontWeight="400"
       bgColor={headerFix}
     >
       <Box>
