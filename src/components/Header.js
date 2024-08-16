@@ -31,7 +31,7 @@ export const Header = () => {
       h="60px"
       justifyContent="center"
       alignItems="center"
-      fontSize={{ xl: "22px", lg: "18px" }}
+      fontSize={{ "2xl": "22px", xl: "20px", lg: "18px" }}
       fontWeight="400"
       bgColor={headerFix}
     >
