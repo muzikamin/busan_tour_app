@@ -56,8 +56,8 @@ export const DetailTheme = () => {
             <Box
               px={{
                 xl: "140px",
-                lg: "100px",
-                base: "80px",
+                lg: "80px",
+                base: "20px",
               }}
               margin="0 auto"
               h="100%"

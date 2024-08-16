@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const baseUrl =
   "https://apis.data.go.kr/6260000/AttractionService/getAttractionKr";
 
-const foodBaseUrl = "https://apis.data.go.kr/6260000/FoodService/getFoodKr";
+const foodBaseUrl = "http://apis.data.go.kr/6260000/FoodService/getFoodKr";
 
 const themeBaseUrl =
   "https://apis.data.go.kr/6260000/RecommendedService/getRecommendedKr";
