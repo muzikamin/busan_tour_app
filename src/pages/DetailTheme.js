@@ -56,7 +56,7 @@ export const DetailTheme = () => {
             <Box
               px={{
                 xl: "140px",
-                lg: "80px",
+                lg: "60px",
                 sm: "40px",
                 base: "20px",
               }}
