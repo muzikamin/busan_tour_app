@@ -80,13 +80,35 @@ export const Home = () => {
                       w="100%"
                       h="100%"
                       position="absolute"
-                      background="linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0) 52%)"
+                      background="linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0,0,0,0.2) 80%)"
                     />
-                    <Box position="absolute" left={margin.lrm} bottom="100px">
-                      <Text fontSize={40} fontWeight={700} mb={1}>
+                    <Box
+                      position="absolute"
+                      left={{
+                        xl: margin.lrm,
+                        lg: margin.lrmm,
+                        base: margin.lrmm,
+                      }}
+                      bottom="100px"
+                    >
+                      <Text
+                        fontSize={{
+                          "2xl": "40px",
+                          lg: "32px",
+                          base: "28px",
+                        }}
+                        fontWeight={700}
+                        mb={1}
+                        color="rgba(255, 255, 255, 1)"
+                      >
                         {data.TITLE}
                       </Text>
-                      <Text fontSize={18} fontWeight={400} opacity={0.8}>
+                      <Text
+                        fontSize={18}
+                        fontWeight={400}
+                        opacity={0.8}
+                        color="rgba(255, 255, 255, 0.8)"
+                      >
                         {data.SUBTITLE}
                       </Text>
                     </Box>
@@ -103,7 +125,11 @@ export const Home = () => {
             ))}
           </Swiper>
           {/* -----------------메인배너--------------------- */}
-          <Box marginTop="100px" ml={margin.lrm} marginBottom="100px">
+          <Box
+            marginTop="100px"
+            px={{ xl: margin.lrm, lg: margin.lrmm, base: margin.lrmm }}
+            marginBottom="100px"
+          >
             <Text fontSize="32px" fontWeight="700" mb="10px">
               부산 어디로 GO?
             </Text>
@@ -140,7 +166,7 @@ export const Home = () => {
                     <Link to={`/detail/${data.UC_SEQ}`}>
                       <Image
                         borderRadius="10px"
-                        h="100%"
+                        h="250px"
                         objectFit="cover"
                         src={data.MAIN_IMG_NORMAL}
                         alt={data.TITLE}
@@ -166,7 +192,11 @@ export const Home = () => {
           </Box>
           {/* -----------------첫번째 섹션--------------------- */}
           <Box bg={colorPoint.pointopa} paddingTop="10px" paddingBottom="10px">
-            <Box marginTop="100px" ml={margin.lrm} marginBottom="100px">
+            <Box
+              marginTop="100px"
+              px={{ xl: margin.lrm, lg: margin.lrmm, base: margin.lrmm }}
+              marginBottom="100px"
+            >
               <Text fontSize="32px" fontWeight="700" mb="10px">
                 부산 맛집으로 GO?
               </Text>
@@ -203,7 +233,7 @@ export const Home = () => {
                       <Box w="100%">
                         <Image
                           borderRadius="10px"
-                          h="100%"
+                          h="250px"
                           objectFit="cover"
                           src={data.MAIN_IMG_NORMAL}
                           alt={data.TITLE}
@@ -229,8 +259,20 @@ export const Home = () => {
             </Box>
           </Box>
           {/* -----------------두번째 섹션--------------------- */}
-          <Box marginTop="100px" ml={margin.lrm} marginBottom="100px">
-            <Text fontSize="32px" fontWeight="700" mb="10px">
+          <Box
+            marginTop="100px"
+            px={{ xl: margin.lrm, lg: margin.lrmm, base: margin.lrmm }}
+            marginBottom="100px"
+          >
+            <Text
+              fontSize={{
+                "2xl": "32px",
+                lg: "28px",
+                base: "24px",
+              }}
+              fontWeight="700"
+              mb="10px"
+            >
               부산 테마여행 GO?
             </Text>
             <Text mb={10} fontSize="18px">
@@ -266,7 +308,7 @@ export const Home = () => {
                     <Box w="100%">
                       <Image
                         borderRadius="10px"
-                        h="100%"
+                        h="250px"
                         objectFit="cover"
                         src={data.MAIN_IMG_NORMAL}
                         alt={data.TITLE}

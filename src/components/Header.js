@@ -26,13 +26,13 @@ export const Header = () => {
       top="0"
       left="0"
       zIndex="99"
-      px={margin.lrm}
+      px={{ xl: margin.lrm, lg: margin.lrmm, base: margin.lrmm }}
       w="100%"
       h="60px"
       justifyContent="center"
       alignItems="center"
-      fontSize="20px"
-      fontWeight="400"
+      fontSize={{ xl: "22px", lg: "18px" }}
+      fontWeight="600"
       bgColor={headerFix}
     >
       <Box>
@@ -44,11 +44,8 @@ export const Header = () => {
       </Box>
       <Spacer />
       <Flex gap="50px">
-        <Link to={routes.recommend}>
-          <Text>추천명소</Text>
-        </Link>
         <Link to={routes.search}>
-          <Text>명소검색</Text>
+          <Text>검색하기</Text>
         </Link>
       </Flex>
     </Flex>

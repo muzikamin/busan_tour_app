@@ -7,4 +7,5 @@ export const colorPoint = {
 
 export const margin = {
   lrm: "100px",
+  lrmm: "20px",
 };

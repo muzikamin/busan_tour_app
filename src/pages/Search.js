@@ -74,7 +74,7 @@ export const Search = () => {
 
   return (
     <>
-      <div style={{ padding: "140px" }}>
+      <Box padding={{ xl: "140px", lg: "100px", base: "80px" }}>
         <PageTitle title="검색하기" />
         <form
           style={{ position: "relative" }}
@@ -87,7 +87,7 @@ export const Search = () => {
               height: "50px",
               borderRadius: "1px solid #555",
               padding: "0 10px",
-              fontSize: "20px",
+              fontSize: "18px",
               borderBottom: `1px solid ${colorPoint.middleColor}`,
             }}
             {...register("keyword", {
@@ -123,12 +123,22 @@ export const Search = () => {
               {dataResult && (
                 <Box>
                   {dataResult?.length === 0 ? (
-                    "검색결과 없음"
+                    <Box padding="40px">
+                      <Text
+                        fontSize={{ xl: "26px", lg: "20px", base: "20px" }}
+                        fontWeight="700"
+                        marginBottom="14px"
+                        color={colorPoint.middleColor}
+                      >
+                        부산여행
+                      </Text>
+                      <Text>검색결과 없음</Text>
+                    </Box>
                   ) : (
                     <>
                       <Box style={{ padding: "40px", position: "relative" }}>
                         <Text
-                          fontSize="26px"
+                          fontSize={{ xl: "26px", lg: "20px", base: "20px" }}
                           fontWeight="700"
                           marginBottom="14px"
                           color={colorPoint.middleColor}
@@ -183,12 +193,22 @@ export const Search = () => {
               {foodResult && (
                 <Box>
                   {foodResult?.length === 0 ? (
-                    "검색결과 없음"
+                    <Box padding="40px">
+                      <Text
+                        fontSize="26px"
+                        fontWeight="700"
+                        marginBottom="14px"
+                        color={colorPoint.middleColor}
+                      >
+                        푸드
+                      </Text>
+                      <Text>검색결과 없음</Text>
+                    </Box>
                   ) : (
                     <>
                       <Box style={{ padding: "40px", position: "relative" }}>
                         <Text
-                          fontSize="26px"
+                          fontSize={{ xl: "26px", lg: "20px", base: "20px" }}
                           fontWeight="700"
                           marginBottom="14px"
                           color={colorPoint.middleColor}
@@ -207,7 +227,7 @@ export const Search = () => {
                         >
                           {foodResult.map((data) => (
                             <SwiperSlide key={data.UC_SEQ}>
-                              <Link to={`/detail/${data.UC_SEQ}`}>
+                              <Link to={`/detailfood/${data.UC_SEQ}`}>
                                 <Box w="100%">
                                   <Image
                                     borderRadius="10px"
@@ -244,12 +264,22 @@ export const Search = () => {
           {themeResult && (
             <Box>
               {themeResult?.length === 0 ? (
-                "검색결과 없음"
+                <Box padding="40px">
+                  <Text
+                    fontSize="26px"
+                    fontWeight="700"
+                    marginBottom="14px"
+                    color={colorPoint.middleColor}
+                  >
+                    테마여행
+                  </Text>
+                  <Text>검색결과 없음</Text>
+                </Box>
               ) : (
                 <>
                   <Box style={{ padding: "40px", position: "relative" }}>
                     <Text
-                      fontSize="26px"
+                      fontSize={{ xl: "26px", lg: "20px", base: "20px" }}
                       fontWeight="700"
                       marginBottom="14px"
                       color={colorPoint.middleColor}
@@ -269,7 +299,7 @@ export const Search = () => {
                     >
                       {themeResult.map((data) => (
                         <SwiperSlide key={data.UC_SEQ}>
-                          <Link to={`/detail/${data.UC_SEQ}`}>
+                          <Link to={`/detailtheme/${data.UC_SEQ}`}>
                             <Box w="100%">
                               <Image
                                 borderRadius="10px"
@@ -302,7 +332,7 @@ export const Search = () => {
             </Box>
           )}
         </>
-      </div>
+      </Box>
     </>
   );
 };
