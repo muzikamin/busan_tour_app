@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/busan_tour_app/static/css/main.3c70d7db.css",
-    "main.js": "/busan_tour_app/static/js/main.358144df.js",
+    "main.js": "/busan_tour_app/static/js/main.2ca36ff4.js",
     "index.html": "/busan_tour_app/index.html",
     "main.3c70d7db.css.map": "/busan_tour_app/static/css/main.3c70d7db.css.map",
-    "main.358144df.js.map": "/busan_tour_app/static/js/main.358144df.js.map"
+    "main.2ca36ff4.js.map": "/busan_tour_app/static/js/main.2ca36ff4.js.map"
   },
   "entrypoints": [
     "static/css/main.3c70d7db.css",
-    "static/js/main.358144df.js"
+    "static/js/main.2ca36ff4.js"
   ]
 }
