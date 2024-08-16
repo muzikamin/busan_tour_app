@@ -57,6 +57,7 @@ export const DetailTheme = () => {
               px={{
                 xl: "140px",
                 lg: "80px",
+                sm: "40px",
                 base: "20px",
               }}
               margin="0 auto"
